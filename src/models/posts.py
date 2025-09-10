@@ -10,3 +10,4 @@ class PostsOrm(Base):
     url_s3: Mapped[str] = mapped_column(String(10840))
     url_hashed: Mapped[str] = mapped_column(String(10840), nullable=True)
 
+

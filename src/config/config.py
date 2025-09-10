@@ -10,10 +10,10 @@ class DatabaseConfig(ConfigBase):
 
     model_config = SettingsConfigDict(env_prefix="DB_")
 
-    HOST: str = "localhost"
+    HOST: str = "127.0.0.1"
     PORT: int = 5432
     USER: str = "postgres"
-    PASS: str = "postgres"
+    PASS: int = 0000
     NAME: str = "pastebin"
 
     @property
