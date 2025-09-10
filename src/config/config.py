@@ -1,5 +1,13 @@
+import boto3
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+session = boto3.session.Session()
+s3 = session.client(
+    service_name='s3',
+    endpoint_url='https://storage.yandexcloud.net'
+)
+
 
 class ConfigBase(BaseSettings):
 
